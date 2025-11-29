@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="navbar">
+            <select id="filterCategory" onchange="applyFilters()">
+                <option>All</option>
+                <option>Auto</option>
+                <option>Car</option>
+                <option>Truck</option>
+                <option>Bus</option>
+            </select>
+            <select id="filterAvailability" onchange="applyFilters()">
+                <option>All</option>
+                <option>Available</option>
+                <option>Unavailable</option>
+            </select>
+            <button onclick="clearFilters()"></button>
+        </div>
+        <div class="sidebar">
+            <h3>Add Fleet</h3>
+            <input type="text" id="regNo" placeholder="Reg No of Vehicle" />
+            <select id="category">
+                <option>Auto</option>
+                <option>Car</option>
+                <option>Truck</option>
+                <option>Bus</option>
+            </select>
+            <input type="text" id="driver" placeholder="Driver Name"/>
+            <select id ="availability">
+                <option>Available</option>
+                <option>Unavailable</option>
+
+            </select>
+            <button onclick="addFleet()">Add Fleet</button>
+        </div>
+        <div class="main" id="fleetContainer"></div>
+        <script src="script.js"></script>
+    </body>
+</html>
